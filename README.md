@@ -1,4 +1,4 @@
-#OUR TEAM
+# OUR TEAM
 
 ```
 Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
