@@ -1,4 +1,4 @@
-const div = document.querySelector('.container');
+const div = document.querySelector('.row');
 
 // Array con oggetti
 
@@ -35,14 +35,19 @@ const ourTeam = [
   },
 ];
 
-for (let member of ourTeam) {
+/* Ciclo forEach applicando un'azione a ciascun elemento di un array.
+ */
+
+ourTeam.forEach((member) => {
   console.log(member.nome);
   console.log(member.ruolo);
   console.log(member.imgProfilo);
   div.innerHTML += `
-  <div class ='card'>
-  ${member.imgProfilo} ${member.nome} ${member.ruolo}
-  </div>`;
-}
-
-console.log(ourTeam);
+    <div class ='col-4'>
+      <div class ='card mb-4'>
+        <img src="img/${member.imgProfilo}"> 
+        <h5 class ='pt-3'>${member.nome}</h5> 
+        <p>${member.ruolo}</p> 
+      </div>
+    </div>`;
+});
